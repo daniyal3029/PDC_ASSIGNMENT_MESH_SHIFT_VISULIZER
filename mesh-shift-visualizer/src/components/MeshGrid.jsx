@@ -18,8 +18,8 @@ const STAGE_INFO = {
 };
 
 const ARROW_COLORS = [
-  '#6366f1', '#f43f5e', '#10b981', '#f59e0b',
-  '#8b5cf6', '#06b6d4', '#ec4899', '#14b8a6',
+  '#2dd4bf', '#38bdf8', '#4ade80', '#fbbf24',
+  '#fb923c', '#f87171', '#a78bfa', '#34d399',
 ];
 
 export default function MeshGrid({ p, q, stage }) {
@@ -43,11 +43,11 @@ export default function MeshGrid({ p, q, stage }) {
   const stageInfo = STAGE_INFO[stage] || STAGE_INFO.initial;
   const subText = useMemo(() => {
     switch (stage) {
-      case 'initial':   return 'Each node holds its own index as data';
-      case 'rowShift':  return `Shifting right by ${getRowShift(q, p)} within each row`;
-      case 'afterRow':  return 'Row shift complete — preparing column shift';
-      case 'colShift':  return `Shifting down by ${getColShift(q, p)} within each column`;
-      case 'final':     return `Circular ${q}-shift complete!`;
+      case 'initial':   return 'Nodes at initial positions';
+      case 'rowShift':  return `Row shift by ${getRowShift(q, p)}`;
+      case 'afterRow':  return 'Row shift done';
+      case 'colShift':  return `Column shift by ${getColShift(q, p)}`;
+      case 'final':     return `${q}-shift complete`;
       default:          return '';
     }
   }, [stage, p, q]);
@@ -167,7 +167,7 @@ export default function MeshGrid({ p, q, stage }) {
       {/* Before/After comparison on final stage */}
       {stage === 'final' && (
         <div className="comparison-section">
-          <h3 className="comparison-title">📊 Before / After Comparison</h3>
+          <h3 className="comparison-title">Before / After</h3>
           <div className="comparison-grids">
             <div className="comparison-grid-wrap">
               <h4>Initial State</h4>

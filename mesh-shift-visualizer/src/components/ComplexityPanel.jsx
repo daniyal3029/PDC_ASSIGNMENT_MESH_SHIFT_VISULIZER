@@ -26,7 +26,7 @@ export default function ComplexityPanel({ p, q }) {
   return (
     <div className="complexity-panel">
       <div className="panel-header">
-        <span className="panel-icon">📈</span>
+        <span className="panel-icon">⚡</span>
         <h2>Complexity Analysis</h2>
       </div>
 
@@ -51,7 +51,7 @@ export default function ComplexityPanel({ p, q }) {
 
       {/* Formulas */}
       <div className="cx-section">
-        <h3>📐 Formulas</h3>
+        <h3>Formulas</h3>
         <div className="formula-card">
           <div className="formula-row">
             <span className="formula-name">Ring Steps</span>
@@ -70,7 +70,7 @@ export default function ComplexityPanel({ p, q }) {
 
       {/* Bar chart */}
       <div className="cx-section">
-        <h3>📊 Mesh vs Ring Comparison</h3>
+        <h3>Mesh vs Ring</h3>
         <div className="bar-chart">
           <div className="bar-row">
             <span className="bar-label">Ring</span>
@@ -118,24 +118,19 @@ export default function ComplexityPanel({ p, q }) {
 
       {/* Why mesh is better */}
       <div className="cx-section">
-        <h3>💡 Why Mesh is More Efficient</h3>
+        <h3>Why Mesh Wins</h3>
         <div className="explanation-card">
           <p>
-            A <strong>ring topology</strong> has only one circular path. Data
-            must travel sequentially, requiring <code>min(q, p−q)</code> hops.
-          </p>
-          <p>
-            A <strong>2D mesh</strong> decomposes the shift into two independent
-            stages (row + column), exploiting parallelism within each ring. The
-            total hops become <code>(q mod √p) + ⌊q/√p⌋</code>, which grows as{' '}
-            <strong>O(√p)</strong> vs the ring&apos;s <strong>O(p)</strong>.
+            A <strong>ring</strong> sends data along a single circular path — <code>min(q, p−q)</code> hops.
+            A <strong>2D mesh</strong> splits the shift into row + column stages,
+            reducing hops to <code>(q mod √p) + ⌊q/√p⌋</code> — <strong>O(√p)</strong> vs <strong>O(p)</strong>.
           </p>
         </div>
       </div>
 
       {/* Table */}
       <div className="cx-section">
-        <h3>📋 Comparison Table</h3>
+        <h3>Comparison Table</h3>
         <div className="table-wrapper">
           <table className="comparison-table">
             <thead>

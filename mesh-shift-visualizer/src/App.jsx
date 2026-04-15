@@ -59,18 +59,10 @@ function App() {
       <header className="app-header">
         <div className="header-content">
           <div className="header-title">
-            <span className="logo-icon">◈</span>
-            <div>
-              <h1>Mesh Circular Shift Visualizer</h1>
-              <p className="subtitle">
-                Interactive 2D Mesh Topology Simulator for Parallel Computing
-              </p>
-            </div>
+            <span className="logo-icon">⬡</span>
+            <h1>Mesh Shift Visualizer</h1>
           </div>
-          <div className="header-badges">
-            <span className="badge">PDC Assignment 2</span>
-            <span className="badge badge-accent">Q4</span>
-          </div>
+          <span className="badge">PDC — Assignment 2</span>
         </div>
       </header>
 
@@ -96,10 +88,7 @@ function App() {
 
       {/* Footer */}
       <footer className="app-footer">
-        <p>
-          Mesh Circular Shift Visualizer &mdash; Parallel &amp; Distributed
-          Computing
-        </p>
+        <p>Mesh Shift Visualizer &middot; PDC Assignment 2</p>
       </footer>
     </>
   );

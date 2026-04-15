@@ -4,7 +4,7 @@ Interactive web application to simulate and visualize circular q-shift operation
 
 ## 🌐 Live Demo
 
-**Deployed URL:** [https://mesh-shift-visualizer.netlify.app](https://mesh-shift-visualizer.netlify.app)
+**Deployed URL:** [https://mesh-shift-visualizer.vercel.app](https://mesh-shift-visualizer.vercel.app)
 
 > *(Update this URL after deployment)*
 
@@ -31,9 +31,9 @@ This application provides an interactive visualization of this algorithm, includ
 
 - **Framework**: React 19 (via Vite)
 - **Build Tool**: Vite 8
-- **Styling**: Vanilla CSS with custom properties (dark glassmorphism theme)
+- **Styling**: Vanilla CSS with custom properties (dark theme)
 - **Fonts**: Inter + JetBrains Mono (Google Fonts)
-- **Deployment**: Netlify / Vercel / GitHub Pages
+- **Deployment**: Vercel
 
 ## 🏗️ Project Structure
 
@@ -99,16 +99,7 @@ npm run preview
 
 ## 🚢 Deployment
 
-### Netlify
-
-1. Push code to GitHub
-2. Go to [netlify.com](https://netlify.com) → New Site from Git
-3. Connect your GitHub repo
-4. Build command: `npm run build`
-5. Publish directory: `dist`
-6. Click Deploy
-
-### Vercel
+### Vercel (Recommended)
 
 1. Push code to GitHub
 2. Go to [vercel.com](https://vercel.com) → Import Project

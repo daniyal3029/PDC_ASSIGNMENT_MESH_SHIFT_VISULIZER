@@ -3,7 +3,7 @@
 .mesh-grid-wrapper {
   position: relative;
   width: 100%;
-  max-width: 650px;
+  max-width: 620px;
   margin: 0 auto;
 }
 
@@ -16,47 +16,42 @@
   border-radius: var(--radius-md);
   margin-bottom: var(--space-lg);
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
-  backdrop-filter: blur(10px);
-  transition: all 0.4s ease;
+  border: 1px solid var(--border-main);
+  transition: border-color 0.3s ease;
 }
 
 .stage-indicator.row-shift {
-  border-color: rgba(99, 102, 241, 0.4);
-  box-shadow: var(--shadow-glow-blue);
+  border-color: rgba(56, 189, 248, 0.35);
 }
 
 .stage-indicator.col-shift {
-  border-color: rgba(168, 85, 247, 0.4);
-  box-shadow: var(--shadow-glow-purple);
+  border-color: rgba(251, 146, 60, 0.35);
 }
 
 .stage-indicator.final {
-  border-color: rgba(16, 185, 129, 0.4);
-  box-shadow: var(--shadow-glow-green);
+  border-color: rgba(74, 222, 128, 0.35);
 }
 
-.stage-icon { font-size: 1.6rem; }
+.stage-icon { font-size: 1.4rem; }
 
 .stage-text h3 {
-  font-size: 1rem;
+  font-size: 0.92rem;
   font-weight: 700;
 }
 
 .stage-text p {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
 }
 
 /* The mesh grid */
 .mesh-grid {
   display: grid;
-  gap: 6px;
+  gap: 5px;
   padding: var(--space-md);
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 1px solid var(--border-main);
   border-radius: var(--radius-lg);
-  backdrop-filter: blur(10px);
 }
 
 .cell {
@@ -65,46 +60,45 @@
   align-items: center;
   justify-content: center;
   padding: 12px 8px;
-  background: rgba(15, 15, 45, 0.6);
-  border: 1px solid var(--border-glass);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-main);
   border-radius: var(--radius-sm);
-  transition: all 0.3s ease;
-  gap: 4px;
+  transition: all 0.2s ease;
+  gap: 3px;
   min-width: 0;
 }
 
 .cell:hover {
-  background: var(--bg-glass-hover);
-  border-color: var(--accent-blue);
-  transform: scale(1.05);
+  border-color: var(--accent);
+  background: var(--bg-elevated);
+  transform: scale(1.04);
   z-index: 2;
 }
 
 .cell-index {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 600;
   color: var(--text-muted);
   font-family: var(--font-mono);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 }
 
 .cell-data {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  color: var(--accent-blue-light);
+  color: var(--accent);
   font-family: var(--font-mono);
   transition: all 0.3s ease;
 }
 
 .cell-data.data-changed {
-  color: var(--accent-green-light);
-  text-shadow: 0 0 8px rgba(52, 211, 153, 0.5);
+  color: var(--accent-green);
 }
 
 .cell-sm { padding: 8px 4px; }
-.cell-sm .cell-index { font-size: 0.55rem; }
-.cell-sm .cell-data { font-size: 0.85rem; }
+.cell-sm .cell-index { font-size: 0.52rem; }
+.cell-sm .cell-data { font-size: 0.82rem; }
 
 /* Arrow overlay */
 .arrow-overlay {
@@ -118,13 +112,13 @@
 }
 
 .arrow-path {
-  animation: draw-arrow 0.6s ease-out forwards;
-  opacity: 0.85;
+  animation: draw-arrow 0.5s ease-out forwards;
+  opacity: 0.8;
 }
 
 @keyframes draw-arrow {
   from { stroke-dashoffset: 200; opacity: 0; }
-  to   { stroke-dashoffset: 0;   opacity: 0.85; }
+  to   { stroke-dashoffset: 0;   opacity: 0.8; }
 }
 
 /* Comparison section */
@@ -132,19 +126,18 @@
   margin-top: var(--space-xl);
   padding: var(--space-lg);
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 1px solid var(--border-main);
   border-radius: var(--radius-lg);
-  backdrop-filter: blur(10px);
-  animation: fadeIn 0.5s ease;
+  animation: fadeIn 0.4s ease;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
 .comparison-title {
-  font-size: 1rem;
+  font-size: 0.92rem;
   font-weight: 700;
   margin-bottom: var(--space-md);
 }
@@ -158,7 +151,7 @@
 }
 
 .comparison-grid-wrap h4 {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-secondary);
   text-align: center;
@@ -172,15 +165,9 @@
 
 .cell-mini { padding: 6px 4px; }
 .cell-mini .cell-index { display: none; }
-.cell-mini .cell-data { font-size: 0.75rem; }
+.cell-mini .cell-data { font-size: 0.72rem; }
 
 .comparison-arrow-icon {
-  font-size: 2rem;
-  color: var(--accent-purple);
-  animation: bounce-right 1.5s ease-in-out infinite;
-}
-
-@keyframes bounce-right {
-  0%, 100% { transform: translateX(0); }
-  50%      { transform: translateX(8px); }
+  font-size: 1.5rem;
+  color: var(--text-muted);
 }
