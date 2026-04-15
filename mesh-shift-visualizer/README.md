@@ -4,7 +4,7 @@ Interactive web application to simulate and visualize circular q-shift operation
 
 ## 🌐 Live Demo
 
-**Deployed URL:** [https://mesh-shift-visualizer.vercel.app](https://mesh-shift-visualizer.vercel.app)
+**Deployed URL:** [https://mesh-shift-visualizer.vercel.app](https://pdc-assignment-mesh-shift-visulizer.vercel.app)
 
 > *(Update this URL after deployment)*
 
