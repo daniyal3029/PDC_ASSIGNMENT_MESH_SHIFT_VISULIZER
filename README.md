@@ -2,13 +2,13 @@
 
 Interactive web application to simulate and visualize circular q-shift operations on 2D mesh topologies in parallel computing.
 
-## 🌐 Live Demo
+## Live Demo
 
 **Deployed URL:** [https://mesh-shift-visualizer.netlify.app](https://mesh-shift-visualizer.netlify.app)
 
 > *(Update this URL after deployment)*
 
-## 📖 Overview
+## Overview
 
 In parallel computing, a **circular q-shift** is a permutation where node `i` sends its data to node `(i + q) mod p`. On a 2D mesh topology, this is efficiently implemented in two stages:
 
@@ -17,7 +17,7 @@ In parallel computing, a **circular q-shift** is a permutation where node `i` se
 
 This application provides an interactive visualization of this algorithm, including step-by-step animation with directional arrows and a real-time complexity analysis panel.
 
-## ✨ Features
+## Features
 
 - **Interactive Controls**: Configure `p` (4–64, perfect squares only) and `q` (1 to p−1) with validation
 - **Animated Visualization**: Step-by-step animation — Initial → Row Shift → Column Shift → Final
@@ -27,7 +27,7 @@ This application provides an interactive visualization of this algorithm, includ
 - **Comparison Table**: Pre-computed results for p=16,64 and q=3,5,7
 - **Responsive Design**: Full 3-column desktop layout + mobile-friendly single-column
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: React 19 (via Vite)
 - **Build Tool**: Vite 8
@@ -35,7 +35,7 @@ This application provides an interactive visualization of this algorithm, includ
 - **Fonts**: Inter + JetBrains Mono (Google Fonts)
 - **Deployment**: Netlify / Vercel / GitHub Pages
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 mesh-shift-visualizer/
@@ -61,7 +61,7 @@ mesh-shift-visualizer/
 │── vite.config.js
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -80,7 +80,6 @@ npm install
 # Start development server
 npm run dev
 ```
-
 Then open `http://localhost:5173/` in your browser.
 
 ### Build for Production
@@ -88,7 +87,6 @@ Then open `http://localhost:5173/` in your browser.
 ```bash
 npm run build
 ```
-
 Output will be in the `dist/` folder, ready for static hosting.
 
 ### Preview Production Build
@@ -97,54 +95,17 @@ Output will be in the `dist/` folder, ready for static hosting.
 npm run preview
 ```
 
-## 🚢 Deployment
+## Contributing
 
-### Netlify
+To contribute to this project, please follow these steps:
 
-1. Push code to GitHub
-2. Go to [netlify.com](https://netlify.com) → New Site from Git
-3. Connect your GitHub repo
-4. Build command: `npm run build`
-5. Publish directory: `dist`
-6. Click Deploy
+1. Fork the repository
+2. Create a new branch for your feature or bug fix
+3. Commit your changes with a descriptive commit message
+4. Open a pull request against the main branch
 
-### Vercel
+We appreciate any contributions, whether it's a bug fix, a new feature, or improvements to the documentation.
 
-1. Push code to GitHub
-2. Go to [vercel.com](https://vercel.com) → Import Project
-3. Select your repo
-4. Framework Preset: Vite
-5. Deploy
+## License
 
-### GitHub Pages
-
-1. Install: `npm install -D gh-pages`
-2. Add to `vite.config.js`: `base: '/mesh-shift-visualizer/'`
-3. Add script: `"deploy": "npm run build && gh-pages -d dist"`
-4. Run: `npm run deploy`
-
-## 🧮 Algorithm
-
-### Circular q-shift on 2D Mesh
-
-Given `p` processors arranged in a `√p × √p` mesh and shift amount `q`:
-
-| Formula | Expression |
-|---------|-----------|
-| Row shift | `q mod √p` |
-| Column shift | `⌊q / √p⌋` |
-| Mesh total steps | `(q mod √p) + ⌊q / √p⌋` |
-| Ring steps | `min(q, p − q)` |
-
-### Example: p=16, q=5
-
-- √p = 4
-- Row shift = 5 mod 4 = **1** (shift right by 1 in each row)
-- Column shift = ⌊5/4⌋ = **1** (shift down by 1 in each column)
-- Mesh steps = 1 + 1 = **2**
-- Ring steps = min(5, 11) = **5**
-- **Mesh is 60% more efficient!**
-
-## 📄 License
-
-MIT
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
