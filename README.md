@@ -6,8 +6,6 @@ Interactive web application to simulate and visualize circular q-shift operation
 
 **Deployed URL:** [https://mesh-shift-visualizer.netlify.app](https://mesh-shift-visualizer.netlify.app)
 
-> *(Update this URL after deployment)*
-
 ## Overview
 
 In parallel computing, a **circular q-shift** is a permutation where node `i` sends its data to node `(i + q) mod p`. On a 2D mesh topology, this is efficiently implemented in two stages:
@@ -101,10 +99,8 @@ To contribute to this project, please follow these steps:
 
 1. Fork the repository
 2. Create a new branch for your feature or bug fix
-3. Commit your changes with a descriptive commit message
+3. Make your changes and commit them with a descriptive message
 4. Open a pull request against the main branch
-
-We appreciate any contributions, whether it's a bug fix, a new feature, or improvements to the documentation.
 
 ## License
 
