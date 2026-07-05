@@ -97,11 +97,12 @@ npm run preview
 
 To contribute to this project, please follow these steps:
 
-1. Fork the repository and clone it to your local machine.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and commit them with a clear and descriptive message.
-4. Open a pull request and wait for review.
+1. **Fork the repository**: Create a copy of the repository in your own GitHub account.
+2. **Create a new branch**: Create a new branch for your changes, e.g., `feature/new-feature`.
+3. **Make your changes**: Make the necessary changes to the code, following the existing coding standards and best practices.
+4. **Test your changes**: Test your changes thoroughly to ensure they work as expected.
+5. **Create a pull request**: Create a pull request to the main repository, describing the changes you made and why they are necessary.
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
