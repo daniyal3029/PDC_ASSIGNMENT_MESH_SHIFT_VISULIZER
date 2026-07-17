@@ -96,10 +96,12 @@ npm run preview
 ## Contributing
 
 To contribute to this project, please follow these steps:
-1. Fork the repository.
-2. Create a new branch for your changes.
-3. Make your changes and commit them.
-4. Open a pull request with a clear description of your changes.
+
+1. **Fork the repository** and clone it to your local machine.
+2. **Create a new branch** for your feature or bug fix.
+3. **Make your changes** and commit them with a clear and descriptive message.
+4. **Push your changes** to your fork and submit a pull request.
+5. **Wait for review** and address any feedback or issues that arise.
 
 ## License
 
